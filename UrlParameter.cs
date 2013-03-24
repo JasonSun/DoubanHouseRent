@@ -42,6 +42,8 @@ namespace DoubanHouseRent
             List<string> keyword = new List<string>();
             if (!string.IsNullOrEmpty(input.Trim()))
             {
+                // 半角空格替换圆角空格
+                input = input.Replace('　', ' ');
                 keyword = input.Split(' ').ToList();
             }
             return keyword;
